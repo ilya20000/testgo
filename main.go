@@ -39,6 +39,7 @@ func main() {
 	mux.HandleFunc("/v1/snippet", showSnippet)
 	mux.HandleFunc("/v1/snippet/create", createSnippet)
 	mux.HandleFunc("/v1/reg", login.Reg)
+	mux.HandleFunc("/v1/login", login.Login)
 
 	log.Println("Запуск сервера на :4000")
 	err := http.ListenAndServe(":4000", mux)
